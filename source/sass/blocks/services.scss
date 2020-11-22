@@ -1,0 +1,158 @@
+.services {
+  padding-top: 55px;
+  padding-bottom: 111px;
+
+  background-color: $color-font-primary;
+}
+
+.services h2 {
+  text-align: left;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 57px;
+  color: $color-bg-primary;
+
+  padding-left: 171px;
+}
+
+.services ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+
+  margin-top: 0;
+  padding: 19px 150px 0 170px;
+}
+
+.services li {
+  margin-right: 30px;
+  position: relative;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.services a {
+  &:hover,
+  &:focus {
+    outline: none;
+
+    box-shadow: 0 0 10px 10px $color-bg-primary;
+  }
+
+  &:active {
+    box-shadow: 0 0 10px 10px $color-accent;
+  }
+}
+
+.services figure {
+  margin: 0;
+}
+
+.services img {
+  opacity: 0.2;
+}
+
+.services figcaption {
+  position: absolute;
+  top: 50px;
+  left: 0;
+
+  width: 100%;
+
+  padding: 0 160px 0 44px;
+
+  text-align: left;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-bg-primary;
+}
+
+.services span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 63px;
+  height: 63px;
+
+  padding-top: 21px;
+  padding-left: 6px;
+
+  background-color: $color-accent;
+}
+
+@media (max-width: $tablet-only-width) {
+  .services {
+    padding-top: 23px;
+    padding-bottom: 16px;
+  }
+
+  .services h2 {
+    font-size: 32px;
+    line-height: 45px;
+
+    padding-right: 120px;
+    padding-left: 25px;
+  }
+
+  .services ul {
+    flex-direction: column;
+
+    padding: 23px 0 0;
+  }
+
+  .services li {
+    margin: 0 auto 46px;
+
+    &:nth-child(3n) {
+      margin: 0 auto 46px;
+    }
+  }
+
+  .services img {
+    width: 720px;
+    height: 256px;
+    object-fit: cover;
+  }
+
+  .services figcaption {
+    top: 40px;
+    left: 46px;
+
+    width: 170px;
+
+    padding: 0;
+  }
+}
+
+@media (max-width: $mobile-only-width) {
+  .services {
+    padding-top: 27px;
+    padding-bottom: 2px;
+  }
+
+  .services h2 {
+    font-size: 28px;
+    line-height: 39px;
+
+    padding-right: 20px;
+  }
+
+  .services ul {
+    padding: 19px 15px 0;
+  }
+
+  .services li {
+    margin-bottom: 30px;
+  }
+
+  .services figcaption {
+    top: 20px;
+    left: 35px;
+  }
+
+  .services span {
+    padding-left: 0;
+  }
+}

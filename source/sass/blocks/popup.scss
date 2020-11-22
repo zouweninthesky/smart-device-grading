@@ -1,0 +1,76 @@
+.popup--hidden {
+  display: none;
+}
+
+.popup__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 101vh;
+
+  background-color: fade-out($color-overlay, 0.5);
+}
+
+.popup__body {
+  flex-direction: column;
+
+  text-align: left;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60.8%);
+
+  width: 490px;
+  min-height: 605px;
+
+  padding-top: 7px;
+  padding-right: 30px;
+  padding-left: 40px;
+
+  background-color: $color-accent;
+}
+
+button.popup__close-button {
+  position: absolute;
+  top: -6px;
+  right: 19px;
+
+  min-width: auto;
+  min-height: auto;
+  width: 19px;
+  height: 19px;
+
+  background-color: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    right: -2px;
+
+    width: 23px;
+    height: 1px;
+
+    background-color: $color-bg-primary;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 2px 2px $color-bg-primary;
+  }
+}

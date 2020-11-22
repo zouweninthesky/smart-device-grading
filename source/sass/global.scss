@@ -23,6 +23,7 @@ img {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -43,14 +44,10 @@ a {
   color: inherit;
 }
 
-/*.hidden {
-  overflow: hidden;
-}
-
 .sr-only {
   display: none;
 }
-*/
+
 .container {
   max-width: $container-max-width;
   padding: 0;
