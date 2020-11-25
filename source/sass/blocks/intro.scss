@@ -1,5 +1,7 @@
 .intro {
   text-align: left;
+  position: relative;
+  overflow-x: hidden;
 
   min-height: 878px;
 
@@ -24,6 +26,9 @@
 }
 
 .intro h1 {
+  z-index: 3;
+  position: relative;
+
   font-weight: 700;
   font-size: 80px;
   line-height: 106px;
@@ -37,6 +42,7 @@
 
 .intro p {
   position: relative;
+  z-index: 3;
 
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 22px;
@@ -61,8 +67,22 @@
   }
 }
 
+.intro img {
+  z-index: 2;
+  position: absolute;
+  top: 258px;
+  right: 160px;
+}
+
+.intro__button {
+  z-index: 3;
+  position: relative;
+}
+
 .intro__button a {
   display: block;
+
+  position: relative;
 
   font-weight: 700;
   font-size: 16px;
@@ -83,6 +103,18 @@
 
   border-radius: 5px;
 
+  &::before {
+    content: "Получить бесплатную консультацию";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -54%);
+
+    white-space: nowrap;
+  }
+
   &:hover,
   &:focus {
     color: fade-out($color-bg-primary, 0.5);
@@ -93,10 +125,6 @@
   &:active {
     background-color: fade-out($color-accent, 0.5);
   }
-}
-
-.intro__button-content--mobile {
-  display: none;
 }
 
 .intro__scroll {
@@ -130,6 +158,8 @@
 @media (max-width: $tablet-only-width) {
   .intro {
     min-height: 686px;
+    overflow: hidden;
+
 
     padding-top: 188px;
     padding-left: 0;
@@ -164,6 +194,13 @@
       width: 33px;
     }
   }
+
+  .intro img {
+    top: 113px;
+    right: -207px;
+    width: 465px;
+  }
+
 
   .intro__button a {
     width: 379px;
@@ -212,20 +249,22 @@
     }
   }
 
+  .intro img {
+    top: 92px;
+    right: -7px;
+    width: 301px;
+  }
+
   .intro__button a {
     width: 287px;
 
     margin-top: 40px;
     margin-right: auto;
     margin-left: auto;
-  }
 
-  .intro__button-content--desktop {
-    display: none;
-  }
-
-  .intro__button-content--mobile {
-    display: inline;
+    &::before {
+      content: "Бесплатная консультация";
+    }
   }
 
   .intro__scroll {

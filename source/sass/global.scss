@@ -9,6 +9,11 @@ body {
   text-align: center;
 }
 
+.scroll-disabled {
+  overflow: hidden;
+  margin-right: 18px;
+}
+
 *,
 *::before,
 *::after {

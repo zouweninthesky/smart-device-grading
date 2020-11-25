@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  z-index: 3;
 
   width: 100%;
   max-width: 1492px;
@@ -13,6 +14,10 @@
 
   padding-top: 33px;
   padding-right: 34px;
+}
+
+.main-nav--popup-opened {
+  left: calc(50% - 8px);
 }
 
 .main-nav__logo {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "PT Mono";
   src: url("../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/PTMono-Regular.woff") format("woff");
@@ -35,6 +36,10 @@ body {
   color: #1b2d37;
   background-color: #ffffff;
   text-align: center; }
+
+.scroll-disabled {
+  overflow: hidden;
+  margin-right: 18px; }
 
 *,
 *::before,
@@ -569,6 +574,8 @@ a {
 
 .intro {
   text-align: left;
+  position: relative;
+  overflow-x: hidden;
   min-height: 878px;
   padding-top: 309px;
   padding-left: 89px;
@@ -590,6 +597,8 @@ a {
           align-items: flex-start; }
 
 .intro h1 {
+  z-index: 3;
+  position: relative;
   font-weight: 700;
   font-size: 80px;
   line-height: 106px;
@@ -601,6 +610,7 @@ a {
 
 .intro p {
   position: relative;
+  z-index: 3;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 22px;
   line-height: 35px;
@@ -617,8 +627,19 @@ a {
     height: 2px;
     background-color: #ffffff; }
 
+.intro img {
+  z-index: 2;
+  position: absolute;
+  top: 258px;
+  right: 160px; }
+
+.intro__button {
+  z-index: 3;
+  position: relative; }
+
 .intro__button a {
   display: block;
+  position: relative;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
@@ -633,14 +654,19 @@ a {
   padding-top: 16px;
   background-color: #00b2ff;
   border-radius: 5px; }
+  .intro__button a::before {
+    content: "Получить бесплатную консультацию";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -54%);
+            transform: translate(-50%, -54%);
+    white-space: nowrap; }
   .intro__button a:hover, .intro__button a:focus {
     color: rgba(255, 255, 255, 0.5);
     outline: none; }
   .intro__button a:active {
     background-color: rgba(0, 178, 255, 0.5); }
-
-.intro__button-content--mobile {
-  display: none; }
 
 .intro__scroll {
   position: relative; }
@@ -664,6 +690,7 @@ a {
 @media (max-width: 1023px) {
   .intro {
     min-height: 686px;
+    overflow: hidden;
     padding-top: 188px;
     padding-left: 0;
     background-image: url("../img/bg-main-tablet@1x.jpg"); } }
@@ -687,6 +714,10 @@ a {
       top: 16px;
       left: -48px;
       width: 33px; }
+  .intro img {
+    top: 113px;
+    right: -207px;
+    width: 465px; }
   .intro__button a {
     width: 379px;
     margin-top: 55px;
@@ -718,15 +749,17 @@ a {
     .intro p::before {
       top: 15px;
       left: -48px; }
+  .intro img {
+    top: 92px;
+    right: -7px;
+    width: 301px; }
   .intro__button a {
     width: 287px;
     margin-top: 40px;
     margin-right: auto;
     margin-left: auto; }
-  .intro__button-content--desktop {
-    display: none; }
-  .intro__button-content--mobile {
-    display: inline; }
+    .intro__button a::before {
+      content: "Бесплатная консультация"; }
   .intro__scroll {
     display: none; } }
 
@@ -914,6 +947,9 @@ a {
   color: rgba(27, 45, 55, 0.5);
   text-transform: uppercase;
   margin: 14px 0 0; }
+
+.main-footer__link p {
+  margin: 0; }
 
 .main-footer__link a:hover, .main-footer__link a:focus {
   color: #00b2ff;
@@ -1126,6 +1162,7 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  z-index: 3;
   width: 100%;
   max-width: 1492px;
   position: absolute;
@@ -1135,6 +1172,9 @@ a {
           transform: translateX(-50%);
   padding-top: 33px;
   padding-right: 34px; }
+
+.main-nav--popup-opened {
+  left: calc(50% - 8px); }
 
 .main-nav__logo {
   margin-right: auto;
