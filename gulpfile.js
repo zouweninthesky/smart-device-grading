@@ -20,7 +20,7 @@ gulp.task("css", function () {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([ autoprefixer() ]))
+    .pipe(postcss([ autoprefixer ({ grid: 'no-autoplace', browsers: ['> 1%'] }) ]))
     .pipe(rename("style.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(csso())
@@ -62,7 +62,7 @@ gulp.task("images", function() {
 
 gulp.task("webp", function () {
   return gulp.src("build/img/**/img-*.{png,jpg}")
-    .pipe(webp({quality: 90}))
+    .pipe(webp({quality: 80}))
     .pipe(gulp.dest("build/img"));
 });
 

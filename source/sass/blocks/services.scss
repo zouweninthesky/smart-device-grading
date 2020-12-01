@@ -1,6 +1,6 @@
 .services {
   padding-top: 55px;
-  padding-bottom: 111px;
+  padding-bottom: 97px;
 
   background-color: $color-font-primary;
 }
@@ -18,19 +18,20 @@
 .services ul {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
   list-style: none;
 
-  margin-top: 0;
-  padding: 19px 150px 0 170px;
+  margin: 0 auto;
+  padding: 19px 154px 0 170px;
 }
 
 .services li {
-  margin-right: 30px;
   position: relative;
 
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
+  width: 32%;
+  max-width: 370px;
+  margin: 0 0 30px;
 }
 
 .services a {
@@ -85,7 +86,7 @@
 @media (max-width: $tablet-only-width) {
   .services {
     padding-top: 23px;
-    padding-bottom: 16px;
+    padding-bottom: 32px;
   }
 
   .services h2 {
@@ -103,11 +104,10 @@
   }
 
   .services li {
-    margin: 0 auto 46px;
+    max-width: none;
+    width: auto;
 
-    &:nth-child(3n) {
-      margin: 0 auto 46px;
-    }
+    margin: 0 auto 46px;
   }
 
   .services img {
@@ -129,7 +129,7 @@
 @media (max-width: $mobile-only-width) {
   .services {
     padding-top: 27px;
-    padding-bottom: 2px;
+    padding-bottom: 34px;
   }
 
   .services h2 {

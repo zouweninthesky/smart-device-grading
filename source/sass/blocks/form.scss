@@ -61,6 +61,14 @@
   }
 }
 
+.form__bottom {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  position: relative;
+}
+
 .form button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
@@ -80,6 +88,8 @@
 
   border: 1px solid $color-bg-primary;
   border-radius: 5px;
+
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -102,9 +112,9 @@
   min-height: auto;
   height: 16px;
 
-  margin-top: 46px;
-  margin-left: 22px;
-  margin-bottom: 0;
+  position: absolute;
+  top: 43px;
+  right: 243px;
 
   &:focus + label::before,
   &:hover + label::before {
@@ -126,6 +136,7 @@
   width: 230px;
 
   margin-top: 45px;
+  margin-left: 70px;
 
   cursor: pointer;
 
@@ -217,6 +228,14 @@
   padding-left: 23px;
 }
 
+.form--popup .form__bottom {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
 .form--popup button {
   width: 411px;
   min-height: 47px;
@@ -227,14 +246,14 @@
 .form--popup input[type="checkbox"] {
   position: absolute;
 
-  bottom: 52px;
-  left: 39px;
+  top: 106px;
+  left: -1px;
 
   margin: 0;
 }
 
 .form--popup label {
-  width: 411px;
+  width: 350px;
 
   margin-top: 34px;
   margin-left: 48px;
@@ -285,14 +304,14 @@
   }
 
   .form input[type="checkbox"] {
-    margin-top: 48px;
-    margin-left: 23px;
+    margin-top: 5px;
+    margin-left: 22px;
   }
 
   .form label {
     margin-top: 47px;
-    margin-left: 0;
-    margin-right: 7px;
+    margin-left: 73px;
+    margin-right: 0;
 
     &::before {
       left: -34px;
@@ -333,9 +352,13 @@
     width: 290px;
   }
 
+  .form__bottom {
+    flex-direction: column-reverse;
+  }
+
   .form input[type="checkbox"] {
-    margin-top: 31px;
-    margin-left: -1px;
+    top: 97px;
+    left: -23px;
   }
 
   .form button {
@@ -346,6 +369,7 @@
 
   .form label {
     margin-top: 30px;
-    margin-right: 26px;
+    margin-left: 33px;
+    margin-right: 0;
   }
 }

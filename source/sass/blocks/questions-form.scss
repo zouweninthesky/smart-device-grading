@@ -2,6 +2,8 @@
   padding-top: 58px;
   padding-bottom: 113px;
 
+  position: relative;
+
   background-color: $color-accent;
 
   background-image: url("../img/bg-questions-desktop@1x.png");
@@ -10,8 +12,15 @@
     background-image: url("../img/bg-questions-desktop@2x.png");
   }
 
-  background-position: 175px -60px;
+  background-position: 1556px 35px;
   background-repeat: no-repeat;
+}
+
+.questions-form img {
+  position: absolute;
+  top: 94px;
+
+  right: 1042px;
 }
 
 .questions-form .form {
@@ -29,6 +38,10 @@
     padding-bottom: 103px;
 
     background-image: none;
+  }
+
+  .questions-form img {
+    display: none;
   }
 
   .questions-form .form {
