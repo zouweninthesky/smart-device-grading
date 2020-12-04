@@ -852,9 +852,7 @@ a {
   flex-wrap: wrap; }
 
 .main-footer__nav li {
-  width: 48%; }
-
-.main-footer__nav li {
+  width: 48%;
   margin-right: 2%; }
 
 .main-footer__address {
@@ -1350,7 +1348,7 @@ button.popup__close-button {
 .questions-form {
   padding-top: 58px;
   padding-bottom: 113px;
-  position: relative;
+  /*position: relative;*/
   background-color: #00b2ff;
   background-image: url("../img/bg-questions-desktop@1x.png");
   background-position: 1556px 35px;
@@ -1359,16 +1357,22 @@ button.popup__close-button {
     .questions-form {
       background-image: url("../img/bg-questions-desktop@2x.png"); } }
 
+.questions-form .container {
+  position: relative;
+  max-width: 1206px; }
+
 .questions-form img {
   position: absolute;
-  top: 94px;
-  right: 1042px; }
+  top: 6px;
+  left: -153px;
+  max-width: 665px;
+  width: 56%; }
 
 .questions-form .form {
   text-align: left;
   width: 570px;
   margin-left: auto;
-  margin-right: 154px; }
+  margin-right: 10px; }
 
 @media (max-width: 1023px) {
   .questions-form {
